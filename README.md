@@ -71,7 +71,13 @@ Test: "It substitutes a multi-digit number that has 1 inside to Beep"
 Code: 
 text = 11
 modifyArray(numberArray);
-Expected Output: "Beep!"
+Expected Output: [0, 'Beep!', 2, 3, 4, 5, 6, 7, 8, 9, 'Beep!', 'Beep!']
+
+Test: ""It substitutes a multi-digit number that has 2 inside to Boop"
+Code: 
+text = 20
+modifyArray(numberArray);
+Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 'Beep!', 'Beep!', 'Boop!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Boop!']
 
 
 ```
