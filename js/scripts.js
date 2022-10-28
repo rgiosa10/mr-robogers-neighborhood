@@ -17,6 +17,10 @@ function modifyArray(numberArray) {
   for (let i = 1; i < numberArray.length; i += 1) {
     if (numberArray[i] === 1) {
       numberArray[i] = "Beep!";
+    } else if (numberArray[i] === 2) {
+      numberArray[i] = "Boop!";
+    } else if (numberArray[i] === 3) {
+      numberArray[i] = "Won't you be my neighbor?";
     } 
   }
   console.log(numberArray)
@@ -24,5 +28,5 @@ function modifyArray(numberArray) {
 
 // UI Logic
 
-numberArray = convertToArray("1");
+numberArray = convertToArray("5");
 modifyArray(numberArray)

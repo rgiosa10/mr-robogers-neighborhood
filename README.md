@@ -49,13 +49,13 @@ const text: "1";
 modifyArray(numberArray);
 Expected Output: "Beep!"
 
-Test: "It coverts any value that has 1 to 'Beep'"
+Test: "It coverts any value that has 1 to 'Boop'"
 Code: 
 const text: "2";
 modifyArray(numberArray);
 Expected Output: "Boop!"
 
-Test: "It coverts any value that has 1 to 'Beep'"
+Test: "It coverts any value that has 1 to 'Won't you be my neighbor"
 Code: 
 const text: "3";
 modifyArray(numberArray);
