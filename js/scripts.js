@@ -10,7 +10,6 @@ function inputChecker(text) {
   return validInput;
 }
 
-
 function convertToArray(text) {
   let textNumber = parseInt(text);
   let numberArray = [0];
@@ -88,6 +87,8 @@ window.addEventListener("load", function() {
     let p = document.getElementById("results-list")
     
     const validInput = inputChecker(text)
+    // Added clear to prevent seeing multiple submission results
+    document.getElementById("results-list").innerText = "";
 
     // For loop in order to show each result on the webpage
     if (validInput === true) {
@@ -97,7 +98,7 @@ window.addEventListener("load", function() {
         let li = document.createElement("li");
         document.getElementById("results-list").append(ul)
         ul.append(li)
-        li.append(i + ": " + resultsFinal[i]);
+        li.append(resultsFinal[i]+ " at " + i);
 
       }
     } else {
