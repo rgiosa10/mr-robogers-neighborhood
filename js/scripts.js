@@ -28,5 +28,18 @@ function modifyArray(numberArray) {
 
 // UI Logic
 
-numberArray = convertToArray("5");
-modifyArray(numberArray)
+
+
+window.addEventListener("load", function() {
+  let form = document.querySelector("form");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const text = document.getElementById("text-input1").value;
+
+    numberArray = convertToArray(text);
+    modifyArray(numberArray)
+
+  });
+});

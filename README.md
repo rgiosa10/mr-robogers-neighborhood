@@ -37,7 +37,7 @@ const text: "5";
 convertToArray(text);
 Expected Output: 5
 
-Test: "It uses the number to determine length of array to create in increments of 1"
+Test: "It should return an array of numbers from 0 to the user's inputted number"
 Code: convertToArray("5");
 Expected Output: [0,1,2,3,4,5]
 
