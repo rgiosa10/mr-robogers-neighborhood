@@ -11,7 +11,8 @@ function inputChecker(text) {
 }
 
 function convertToArray(text) {
-  let textNumber = parseInt(text);
+  let textNumber = Math.round(parseFloat(text));
+  console.log(textNumber)
   let numberArray = [0];
   let counter = 0;
   
