@@ -15,9 +15,11 @@ function convertToArray(text) {
 function modifyArray(numberArray) {
   numberArrayString = numberArray.toString().split(",");
   console.log(numberArrayString)
+
   for (let i = 1; i < numberArrayString.length; i += 1) {
     element = numberArrayString[i];
     if (element.length > 1) {
+      
       for (let j = 0; j < element.length; j += 1) {
         if (element.charAt(j) === "3") {
           numberArray[i] = "Won't you be my neighbor?";
@@ -73,7 +75,7 @@ window.addEventListener("load", function() {
     // For loop in order to show each result on the webpage
 
     for (let i = 0; i < resultsFinal.length; i += 1) {
-      p.append(" Number " + i + ": " + resultsFinal[i] + ",");
+      p.append(i + ": " + resultsFinal[i] + ", ");
     }
 
     // Unhide results
