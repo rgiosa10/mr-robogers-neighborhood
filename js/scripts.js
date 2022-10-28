@@ -4,7 +4,9 @@ function inputChecker(text) {
   let validInput = true;
   if (text.trim().length === 0) {
     validInput = false;
-  } 
+  } else if (Number.isInteger(parseInt(text)) != true) {
+    validInput = false;
+  }
   console.log(validInput);
 }
 
