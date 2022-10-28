@@ -15,13 +15,23 @@ function convertToArray(text) {
 function modifyArray(numberArray) {
   
   for (let i = 1; i < numberArray.length; i += 1) {
-    if (numberArray[i] === 1) {
-      numberArray[i] = "Beep!";
-    } else if (numberArray[i] === 2) {
-      numberArray[i] = "Boop!";
-    } else if (numberArray[i] === 3) {
-      numberArray[i] = "Won't you be my neighbor?";
-    } 
+    element = numberArray[i].toString();
+    console.log(element)
+    for (let i = 1; i < element.length; i += 1) {
+      if (stringOfElement.charAt(i) === 1) {
+        numberArray[i] = "Beep!";
+      }
+    }
+    
+    
+    
+    // if (numberArray[i] === 1) {
+    //   numberArray[i] = "Beep!";
+    // } else if (numberArray[i] === 2) {
+    //   numberArray[i] = "Boop!";
+    // } else if (numberArray[i] === 3) {
+    //   numberArray[i] = "Won't you be my neighbor?";
+    // } 
   }
   console.log(numberArray)
 }
