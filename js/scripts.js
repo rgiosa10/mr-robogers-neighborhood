@@ -21,7 +21,9 @@ function modifyArray(numberArray) {
       for (let j = 0; j < element.length; j += 1) {
         if (element.charAt(j) === "2") {
           numberArray[i] = "Boop!";
-        } 
+        } else if (element.charAt(j) === "1") {
+          numberArray[i] = "Beep!";
+        }
       }
     } else {
       if (numberArray[i] === 1) {
