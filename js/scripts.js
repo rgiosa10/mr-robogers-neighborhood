@@ -1,7 +1,11 @@
 // Business Logic
 
 function inputChecker(text) {
-  
+  let validInput = true;
+  if (text.trim().length === 0) {
+    validInput = false;
+  } 
+  console.log(validInput);
 }
 
 
@@ -89,12 +93,13 @@ window.addEventListener("load", function() {
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
-
     const text = document.getElementById("text-input1").value;
     let numberArray = convertToArray(text);
     let resultsFinal = modifyArray(numberArray)
     let p = document.getElementById("results-list")
     
+    inputChecker(text)
+
     // For loop in order to show each result on the webpage
 
     for (let i = 0; i < resultsFinal.length; i += 1) {

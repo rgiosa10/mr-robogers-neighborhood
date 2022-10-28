@@ -97,7 +97,7 @@ Test: "Is validate if number was inputted not empty value"
 Code: 
 const text: "";
 inputChecker(text);
-Expected Output: 0
+Expected Output: false
 
 
 
