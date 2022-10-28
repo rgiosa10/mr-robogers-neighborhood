@@ -39,7 +39,7 @@ Expected Output: 5
 
 Test: "It uses the number to determine length of array to create in increments of 1"
 Code: convertToArray("5");
-Expected Output: [1,2,3,4,5]
+Expected Output: [0,1,2,3,4,5]
 
 ```
 
