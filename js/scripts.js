@@ -46,16 +46,16 @@ function modifyArray(numberArray) {
       }
       // branching from top as priority where if number includes 3 (i.e. true) then substitute
       if (hasThree === true) {
-        numberArray[i] = "Won't you be my neighbor?";
+        numberArrayString[i] = "Won't you be my neighbor?";
       } else if (hasTwo === true) {
-        numberArray[i] = "Boop!";
+        numberArrayString[i] = "Boop!";
       } else if (hasOne === true) {
-        numberArray[i] = "Beep!";
+        numberArrayString[i] = "Beep!";
       }
     }
   }
   // returns the modified array
-  return numberArray;
+  return numberArrayString;
 }
 
 // UI Logic
@@ -63,11 +63,9 @@ function modifyArray(numberArray) {
 function reset() {
   // Unhide form submit button
   document.getElementById("form-submit-button").setAttribute("class", "btn btn-primary btn-lg");
-
   // Hide the results section and reset button
   document.getElementById("result").setAttribute("class", "hidden");
   document.getElementById("reset-btn").setAttribute("class", "hidden");
-
   // Reset form input and results
   document.getElementById("text-input1").value = null;
   document.getElementById("results-list").innerText = "";
@@ -96,10 +94,9 @@ window.addEventListener("load", function() {
       let ul = document.createElement("ul");
       for (let i = 0; i < resultsFinal.length; i += 1) {
         let li = document.createElement("li");
-        document.getElementById("results-list").append(ul)
+        document.getElementById("results-list").append(ul);
         ul.append(li);
         li.append(resultsFinal[i]+ " at " + i);
-
       }
     } else {
       pTitle.innerText = "";
@@ -108,14 +105,11 @@ window.addEventListener("load", function() {
     
     // Unhide results
     document.getElementById("result").setAttribute("class", "bottom");
-
     // Hide the form submit button
     submitBtn.setAttribute("class", "hidden");
-
     // Unhide the reset button
     resetBtn.setAttribute("class","btn btn-outline-warning");
     // Event Listener for clicking the reset button
     resetBtn.addEventListener("click", reset);
-
   });
 });

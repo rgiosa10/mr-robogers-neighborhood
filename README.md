@@ -108,7 +108,7 @@ Expected Output: false
 
 ## Known Bugs
 
-* No known bugs 
+* No known bugs
 
 ## License
 
