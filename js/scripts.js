@@ -7,7 +7,7 @@ function inputChecker(text) {
   } else if (Number.isInteger(parseInt(text)) != true) {
     validInput = false;
   }
-  console.log(validInput);
+  return validInput;
 }
 
 
@@ -98,16 +98,22 @@ window.addEventListener("load", function() {
     const text = document.getElementById("text-input1").value;
     let numberArray = convertToArray(text);
     let resultsFinal = modifyArray(numberArray)
+    let pTitle = document.getElementById("resultText")
     let p = document.getElementById("results-list")
     
-    inputChecker(text)
+    const validInput = inputChecker(text)
 
     // For loop in order to show each result on the webpage
-
-    for (let i = 0; i < resultsFinal.length; i += 1) {
-      p.append(i + ": " + resultsFinal[i] + ", ");
-    }
-
+    if (validInput === true) {
+      pTitle.innerText = "Here are the results:"
+      for (let i = 0; i < resultsFinal.length; i += 1) {
+        p.append(i + ": " + resultsFinal[i] + ", ");
+      }
+    } else {
+      pTitle.innerText = ""
+      p.append("Please input a valid integar (no: decimals, letters or characters)");
+    }  
+    
     // Unhide results
     document.getElementById("result").setAttribute("class", "bottom");
 
