@@ -41,6 +41,12 @@ Test: "It should return an array of numbers from 0 to the user's inputted number
 Code: convertToArray("5");
 Expected Output: [0,1,2,3,4,5]
 
+Test: "It checks if a number has a decimal and rounds it up to the nearest integer"
+Code: 
+const text: "2.5";
+inputChecker(text);
+Expected Output: 3
+
 Describe: modifyArray()
 
 Test: "It converts 1 to 'Beep'"

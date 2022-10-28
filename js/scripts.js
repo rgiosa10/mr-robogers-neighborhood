@@ -80,13 +80,13 @@ window.addEventListener("load", function() {
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
-    const text = document.getElementById("text-input1").value;
+    let text = document.getElementById("text-input1").value;
+    let validInput = inputChecker(text)
     let numberArray = convertToArray(text);
     let resultsFinal = modifyArray(numberArray)
     let pTitle = document.getElementById("resultText")
     let p = document.getElementById("results-list")
     
-    const validInput = inputChecker(text)
     // Added clear to prevent seeing multiple submission results
     document.getElementById("results-list").innerText = "";
 
