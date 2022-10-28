@@ -81,10 +81,10 @@ window.addEventListener("load", function() {
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
-    let text = document.getElementById("text-input1").value;
-    let validInput = inputChecker(text)
-    let numberArray = convertToArray(text);
-    let resultsFinal = modifyArray(numberArray)
+    const text = document.getElementById("text-input1").value;
+    const validInput = inputChecker(text)
+    const numberArray = convertToArray(text);
+    const resultsFinal = modifyArray(numberArray)
     let pTitle = document.getElementById("resultText")
     let p = document.getElementById("results-list")
     
@@ -104,7 +104,7 @@ window.addEventListener("load", function() {
       }
     } else {
       pTitle.innerText = ""
-      p.append("Please input a valid integar (no: decimals, letters or characters)");
+      p.append("Please input a number (no: letters or characters)");
     }  
     
     // Unhide results
