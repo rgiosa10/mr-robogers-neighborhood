@@ -16,26 +16,25 @@ function modifyArray(numberArray) {
   numberArrayString = numberArray.toString().split(",");
   console.log(numberArrayString)
   for (let i = 1; i < numberArrayString.length; i += 1) {
-    element = numberArrayString[i] ;
-    console.log(element)
-  }
-  for (let i = 1; i < element.length; i += 1) {
-    if (element.charAt(i) === "1") {
-      numberArray[i] = "Beep!";
+    element = numberArrayString[i];
+    if (element.length > 1) {
+      for (let j = 0; j < element.length; j += 1) {
+        if (element.charAt(j) === "1") {
+          numberArray[i] = "Beep!";
+        } 
+      }
+    } else {
+      if (numberArray[i] === 1) {
+        numberArray[i] = "Beep!";
+      } else if (numberArray[i] === 2) {
+        numberArray[i] = "Boop!";
+      } else if (numberArray[i] === 3) {
+        numberArray[i] = "Won't you be my neighbor?";
+      } 
     }
   }
   console.log(numberArray)
-    
-    
-    // if (numberArray[i] === 1) {
-    //   numberArray[i] = "Beep!";
-    // } else if (numberArray[i] === 2) {
-    //   numberArray[i] = "Boop!";
-    // } else if (numberArray[i] === 3) {
-    //   numberArray[i] = "Won't you be my neighbor?";
-    // } 
 }
-  
 
 // UI Logic
 
