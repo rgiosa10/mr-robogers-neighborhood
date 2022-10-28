@@ -15,7 +15,9 @@
 
 ## Description
 
-This is a web application that takes a number from the user and returns a list of values from 0 to the user's inputted number. This application will do the following: 1) For numbers that contain a 1, all digits are replaced with "Beep!" 2) For numbers that contain a 2, all digits are replaced with "Boop!" and 3) For numbers that contain a 3, all digits are replaced with "Won't you be my neighbor?". 
+This is a web application that takes a number from the user and returns a list of values from 0 to the user's inputted number. This application will do the following: 1) for numbers that contain a 1, all digits are replaced with "Beep!" 2) for numbers that contain a 2, all digits are replaced with "Boop!" and 3) for numbers that contain a 3, all digits are replaced with "Won't you be my neighbor?". 
+
+Substitutions for the number, if it meets a condition outlined above, should apply unless the subsequent substitution number is met (e.g. 13 should be replaced with "Won't you be my neighbor?", 21 should be replaced with "Boop!", etc.). 
 
 ## Setup/Installation Requirements
 
@@ -110,8 +112,6 @@ Code:
 const text: "k";
 inputChecker(text);
 Expected Output: false
-
-
 
 ```
 
