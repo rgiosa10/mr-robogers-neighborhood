@@ -51,9 +51,9 @@ function reset() {
   document.getElementById("result").setAttribute("class", "hidden");
   document.getElementById("reset-btn").setAttribute("class", "hidden");
 
-  // Reset form inputs to default values
+  // Reset form input and results
   document.getElementById("text-input1").value = null;
-  document.getElementById("ul-placeholder").remove();
+  document.getElementById("results-list").innerText = "";
   
 }
 
@@ -68,15 +68,12 @@ window.addEventListener("load", function() {
     const text = document.getElementById("text-input1").value;
     let numberArray = convertToArray(text);
     let resultsFinal = modifyArray(numberArray)
-    let div = document.getElementById("results-list")
+    let p = document.getElementById("results-list")
     
     // For loop in order to show each result on the webpage
+
     for (let i = 0; i < resultsFinal.length; i += 1) {
-      let ul = document.createElement("ul");
-      let li = document.createElement("li");
-      div.append(ul);
-      ul.append(li);
-      li.append("Number " + i + ": " + resultsFinal[i]);
+      p.append(" Number " + i + ": " + resultsFinal[i] + ",");
     }
 
     // Unhide results
