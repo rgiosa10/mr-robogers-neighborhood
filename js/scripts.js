@@ -77,7 +77,6 @@ function reset() {
 
 window.addEventListener("load", function() {
   let form = document.querySelector("form");
-  let results = document.getElementById("resultsText");
   let resetBtn = document.getElementById("reset-btn")
 
   form.addEventListener("submit", function(event) {
@@ -93,8 +92,13 @@ window.addEventListener("load", function() {
     // For loop in order to show each result on the webpage
     if (validInput === true) {
       pTitle.innerText = "Here are the results:"
+      let ul = document.createElement("ul");
       for (let i = 0; i < resultsFinal.length; i += 1) {
-        p.append(i + ": " + resultsFinal[i] + ", ");
+        let li = document.createElement("li");
+        document.getElementById("results-list").append(ul)
+        ul.append(li)
+        li.append(i + ": " + resultsFinal[i]);
+
       }
     } else {
       pTitle.innerText = ""
