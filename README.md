@@ -2,7 +2,7 @@
 
 #### By Ruben Giosa
 
-#### This is a web application that takes a number from the user and returns a list of values from 0 to the user's inputted number.
+#### This is a web application that takes a number from the user and returns a list of values from 0 to the user's inputted number based on a few substitution conditions. 
 
 ## Technologies Used
 
