@@ -1,0 +1,9 @@
+.hidden {
+  display: none;
+}
+
+.bottom {
+  background-color: lightgreen;
+  padding: 5%;
+  border: black solid 2px;
+}
