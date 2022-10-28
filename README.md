@@ -67,6 +67,11 @@ const text: "5";
 modifyArray(numberArray);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5]
 
+Test: "It substitutes a multi-digit number that has 1 inside to Beep"
+Code: 
+text = 11
+modifyArray(numberArray);
+Expected Output: "Beep!"
 
 
 ```
