@@ -91,11 +91,17 @@ text = 31
 modifyArray(numberArray);
 Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 'Beep!', 'Beep!', 'Boop!', "Won't you be my neighbor?", 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Boop!', 'Beep!', 'Boop!', "Won't you be my neighbor?", 'Boop!', 'Boop!', 'Boop!', 'Boop!', 'Boop!', 'Boop!', "Won't you be my neighbor?", "Won't you be my neighbor?"]
 
-Describe: inputChecker(
+Describe: inputChecker()
 
 Test: "Is validate if number was inputted not empty value"
 Code: 
 const text: "";
+inputChecker(text);
+Expected Output: false
+
+Test: "It checks if an integer was submitted as input"
+Code: 
+const text: "k";
 inputChecker(text);
 Expected Output: false
 
