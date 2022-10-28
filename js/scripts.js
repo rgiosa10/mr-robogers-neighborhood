@@ -13,16 +13,18 @@ function convertToArray(text) {
 }
 
 function modifyArray(numberArray) {
-  
-  for (let i = 1; i < numberArray.length; i += 1) {
-    element = numberArray[i].toString();
+  numberArrayString = numberArray.toString().split(",");
+  console.log(numberArrayString)
+  for (let i = 1; i < numberArrayString.length; i += 1) {
+    element = numberArrayString[i] ;
     console.log(element)
-    for (let i = 1; i < element.length; i += 1) {
-      if (stringOfElement.charAt(i) === 1) {
-        numberArray[i] = "Beep!";
-      }
+  }
+  for (let i = 1; i < element.length; i += 1) {
+    if (element.charAt(i) === "1") {
+      numberArray[i] = "Beep!";
     }
-    
+  }
+  console.log(numberArray)
     
     
     // if (numberArray[i] === 1) {
@@ -32,9 +34,8 @@ function modifyArray(numberArray) {
     // } else if (numberArray[i] === 3) {
     //   numberArray[i] = "Won't you be my neighbor?";
     // } 
-  }
-  console.log(numberArray)
 }
+  
 
 // UI Logic
 
