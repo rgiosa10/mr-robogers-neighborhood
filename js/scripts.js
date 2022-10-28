@@ -1,6 +1,12 @@
 // Business Logic
 
+function inputChecker(text) {
+  
+}
+
+
 function convertToArray(text) {
+  
   let textNumber = parseInt(text);
   let numberArray = [0];
   let counter = 0;
@@ -13,22 +19,39 @@ function convertToArray(text) {
 }
 
 function modifyArray(numberArray) {
+  // Convert numbers into string array
   numberArrayString = numberArray.toString().split(",");
-  console.log(numberArrayString)
-
-  for (let i = 1; i < numberArrayString.length; i += 1) {
+  
+  // for loop on string to isolate for each element
+  for (let i = 0; i < numberArrayString.length; i += 1) {
     element = numberArrayString[i];
+    // If number is larger than 1 digit
     if (element.length > 1) {
-      
+      let hasThree = false;
+      let hasTwo = false;
+      let hasOne = false;
+      // for loop to check each character to in element to see if it has 3, 2 , 1 in order to set Hierarchy
       for (let j = 0; j < element.length; j += 1) {
+        // Branching to determine if it has 3, 2, 1
         if (element.charAt(j) === "3") {
-          numberArray[i] = "Won't you be my neighbor?";
+          hasThree = true;
         } else if (element.charAt(j) === "2") {
+          hasTwo = true;
           numberArray[i] = "Boop!";
         } else if (element.charAt(j) === "1") {
+          hasOne = true;
+          numberArray[i] = "Beep!";
+        }
+        // branching from top as priority where if number includes 3 (i.e. true) then substitute
+        if (hasThree === true) {
+          numberArray[i] = "Won't you be my neighbor?";
+        } else if (hasTwo === true) {
+          numberArray[i] = "Boop!";
+        } else if (hasOne === true) {
           numberArray[i] = "Beep!";
         }
       }
+      // If number is 1 digit
     } else {
       if (numberArray[i] === 1) {
         numberArray[i] = "Beep!";
@@ -39,7 +62,7 @@ function modifyArray(numberArray) {
       } 
     }
   }
-  console.log(numberArray)
+  // returns the modified array
   return numberArray;
 }
 
