@@ -41,6 +41,32 @@ Test: "It uses the number to determine length of array to create in increments o
 Code: convertToArray("5");
 Expected Output: [0,1,2,3,4,5]
 
+Describe: modifyArray()
+
+Test: "It coverts any value that has 1 to 'Beep'"
+Code: 
+const text: "1";
+modifyArray(numberArray);
+Expected Output: "Beep!"
+
+Test: "It coverts any value that has 1 to 'Beep'"
+Code: 
+const text: "2";
+modifyArray(numberArray);
+Expected Output: "Boop!"
+
+Test: "It coverts any value that has 1 to 'Beep'"
+Code: 
+const text: "3";
+modifyArray(numberArray);
+Expected Output: "Won't you be my neighbor?"
+
+Test: "It coverts any value that has 1 to 'Beep'"
+Code: 
+const text: "5";
+modifyArray(numberArray);
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5]
+
 ```
 
 ## Known Bugs

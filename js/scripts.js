@@ -12,6 +12,17 @@ function convertToArray(text) {
   return numberArray;
 }
 
-convertToArray("13");
+function modifyArray(numberArray) {
+  
+  for (let i = 1; i < numberArray.length; i += 1) {
+    if (numberArray[i] === 1) {
+      numberArray[i] = "Beep!";
+    } 
+  }
+  console.log(numberArray)
+}
 
 // UI Logic
+
+numberArray = convertToArray("1");
+modifyArray(numberArray)
