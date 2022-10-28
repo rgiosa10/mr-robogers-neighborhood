@@ -12,7 +12,6 @@ function inputChecker(text) {
 
 function convertToArray(text) {
   let textNumber = Math.round(parseFloat(text));
-  console.log(textNumber)
   let numberArray = [0];
   let counter = 0;
   
@@ -72,38 +71,38 @@ function reset() {
   // Reset form input and results
   document.getElementById("text-input1").value = null;
   document.getElementById("results-list").innerText = "";
-  
 }
 
 window.addEventListener("load", function() {
   let form = document.querySelector("form");
-  let resetBtn = document.getElementById("reset-btn")
+  let resetBtn = document.getElementById("reset-btn");
+  let submitBtn = document.getElementById("form-submit-button");
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
     const text = document.getElementById("text-input1").value;
-    const validInput = inputChecker(text)
+    const validInput = inputChecker(text);
     const numberArray = convertToArray(text);
     const resultsFinal = modifyArray(numberArray)
-    let pTitle = document.getElementById("resultText")
-    let p = document.getElementById("results-list")
+    let pTitle = document.getElementById("resultText");
+    let p = document.getElementById("results-list");
     
     // Added clear to prevent seeing multiple submission results
     document.getElementById("results-list").innerText = "";
 
     // For loop in order to show each result on the webpage
     if (validInput === true) {
-      pTitle.innerText = "Here are the results:"
+      pTitle.innerText = "Here are the results:";
       let ul = document.createElement("ul");
       for (let i = 0; i < resultsFinal.length; i += 1) {
         let li = document.createElement("li");
         document.getElementById("results-list").append(ul)
-        ul.append(li)
+        ul.append(li);
         li.append(resultsFinal[i]+ " at " + i);
 
       }
     } else {
-      pTitle.innerText = ""
+      pTitle.innerText = "";
       p.append("Please input a number (no: letters or characters)");
     }  
     
@@ -111,10 +110,10 @@ window.addEventListener("load", function() {
     document.getElementById("result").setAttribute("class", "bottom");
 
     // Hide the form submit button
-    document.getElementById("form-submit-button").setAttribute("class", "hidden");
+    submitBtn.setAttribute("class", "hidden");
 
     // Unhide the reset button
-    document.getElementById("reset-btn").setAttribute("class","btn btn-outline-warning");
+    resetBtn.setAttribute("class","btn btn-outline-warning");
     // Event Listener for clicking the reset button
     resetBtn.addEventListener("click", reset);
 
