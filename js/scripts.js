@@ -53,6 +53,8 @@ function reset() {
 
   // Reset form inputs to default values
   document.getElementById("text-input1").value = null;
+  document.getElementById("ul-placeholder").remove();
+  
 }
 
 window.addEventListener("load", function() {
@@ -64,15 +66,15 @@ window.addEventListener("load", function() {
     event.preventDefault();
 
     const text = document.getElementById("text-input1").value;
-    let p = document.getElementById("resultText")
     let numberArray = convertToArray(text);
     let resultsFinal = modifyArray(numberArray)
+    let div = document.getElementById("results-list")
     
     // For loop in order to show each result on the webpage
     for (let i = 0; i < resultsFinal.length; i += 1) {
       let ul = document.createElement("ul");
       let li = document.createElement("li");
-      p.after(ul);
+      div.append(ul);
       ul.append(li);
       li.append("Number " + i + ": " + resultsFinal[i]);
     }
