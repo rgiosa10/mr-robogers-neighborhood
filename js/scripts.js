@@ -19,8 +19,10 @@ function modifyArray(numberArray) {
     element = numberArrayString[i];
     if (element.length > 1) {
       for (let j = 0; j < element.length; j += 1) {
-        if (element.charAt(j) === "2") {
-          numberArray[i] = "Boop!";
+        if (element.charAt(j) === "3") {
+          numberArray[i] = "Won't you be my neighbor?";
+        } else if (element.charAt(j) === "2") {
+          numberArray[i] = "Beep!";
         } else if (element.charAt(j) === "1") {
           numberArray[i] = "Beep!";
         }

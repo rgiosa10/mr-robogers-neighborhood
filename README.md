@@ -47,25 +47,25 @@ Test: "It coverts 1 to 'Beep'"
 Code: 
 const text: "1";
 modifyArray(numberArray);
-Expected Output: "Beep!"
+Expected Output: 'Beep!'
 
 Test: "It coverts 2 to 'Boop'"
 Code: 
 const text: "2";
 modifyArray(numberArray);
-Expected Output: "Boop!"
+Expected Output: 'Boop!'
 
 Test: "It coverts 3 to 'Won't you be my neighbor"
 Code: 
 const text: "3";
 modifyArray(numberArray);
-Expected Output: "Won't you be my neighbor?"
+Expected Output: 'Won't you be my neighbor?'
 
 Test: "It substitutes elements 1, 2, and 3"
 Code: 
 const text: "5";
 modifyArray(numberArray);
-Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5]
+Expected Output: [0, 'Beep!', 'Boop!', 'Won't you be my neighbor?', 4, 5]
 
 Test: "It substitutes a multi-digit number that has 1 inside to Beep"
 Code: 
@@ -79,6 +79,11 @@ text = 20
 modifyArray(numberArray);
 Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 'Beep!', 'Beep!', 'Boop!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Boop!']
 
+Test: ""It substitutes a multi-digit number that has 3 inside to Boop"
+Code: 
+text = 13
+modifyArray(numberArray);
+Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 'Beep!', 'Beep!', 'Boop!', 'Won't you be my neighbor?']
 
 ```
 
