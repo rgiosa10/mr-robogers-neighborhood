@@ -39,10 +39,8 @@ function modifyArray(numberArray) {
         hasThree = true;
       } else if (element.charAt(j) === "2") {
         hasTwo = true;
-        numberArray[i] = "Boop!";
       } else if (element.charAt(j) === "1") {
         hasOne = true;
-        numberArray[i] = "Beep!";
       }
       // branching from top as priority where if number includes 3 (i.e. true) then substitute
       if (hasThree === true) {
@@ -81,7 +79,7 @@ window.addEventListener("load", function() {
     const text = document.getElementById("text-input1").value;
     const validInput = inputChecker(text);
     const numberArray = convertToArray(text);
-    const resultsFinal = modifyArray(numberArray)
+    const resultsFinal = modifyArray(numberArray);
     let pTitle = document.getElementById("resultText");
     let p = document.getElementById("results-list");
     
