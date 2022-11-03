@@ -24,11 +24,11 @@ function convertToArray(text) {
 
 function modifyArray(numberArray) {
   // Convert numbers into string array
-  numberArrayString = numberArray.toString().split(",");
+  let numberArrayString = numberArray.toString().split(",");
   
   // for loop on string to isolate for each element
   for (let i = 0; i < numberArrayString.length; i += 1) {
-    element = numberArrayString[i];
+    let element = numberArrayString[i];
     let hasThree = false;
     let hasTwo = false;
     let hasOne = false;
